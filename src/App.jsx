@@ -216,7 +216,7 @@ export default function App() {
               className="space-y-6"
             >
               <p className="text-slate-300 leading-relaxed text-lg">
-                我是一名網頁應用的軟體工程師，專注於使用者體驗與簡潔的架構設計。
+                我是一名學習網頁應用的軟體工程師，專注於使用者體驗與簡潔的架構設計。
               </p>
               <p className="text-slate-300 leading-relaxed text-lg">
                 我的開發理念結合了技術上的嚴謹與創意解決問題的能力。無論是使用 Framer Motion 打造精緻的動畫，還是建構穩健的雲端架構，我均享受迎接各種複雜挑戰的過程。
