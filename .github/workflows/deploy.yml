@@ -1,0 +1,21 @@
+name: Deploy to GCP
+
+# 觸發條件：當有人 push 到 main 分支時執行
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH and Run update.sh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.GCP_HOST }}
+        username: ${{ secrets.GCP_USERNAME }}
+        key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+        script: |
+          # 進入專案資料夾並執行我們之前寫好的魔法腳本
+          cd ~/my-personal-website
+          ./update.sh
